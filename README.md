@@ -7,7 +7,7 @@ A sleek and modern **Fintech Landing Page** built with **Next.js** and **Tailwin
 ---
 
 ## 🚀 Live Demo  
-🔗 [View Live Site](https://your-live-site-link.vercel.app)
+🔗 [View Live Site](https://easy-pay-eta.vercel.app/)
 
 ---
 

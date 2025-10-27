@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
 
         {/* Right Side - Links */}
-        <div className="md:w-3/5 flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-24">
+        <div className="md:w-3/5 flex justify-end flex-col md:flex-row gap-12 md:gap-16 lg:gap-24">
           {/* Short Links */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">

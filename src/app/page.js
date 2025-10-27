@@ -12,7 +12,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 export default function Home() {
   return (
     <div className="font-inter">
-      <div className="rounded-[24px] w-[96%] h-auto mx-auto my-5 bg-gradient-to-r from-[#DCEBFF] via-[#FFF5D6] to-[#EEDBFF] px-[11px] overflow-hidden">
+      <div className="rounded-[24px] w-[99%] h-auto mx-auto my-5 bg-gradient-to-r from-[#DCEBFF] via-[#FFF5D6] to-[#EEDBFF] px-[11px] overflow-hidden">
         <Navbar />
         <Hero />
       </div>

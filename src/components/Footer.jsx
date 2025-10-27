@@ -5,9 +5,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-purple-50 via-white to-white text-gray-800 py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-        {/* Left Side - Logo & Description */}
+    <footer className="bg-gradient-to-t from-purple-50 via-white to-white text-gray-800 py-12 px-6 md:px-24">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 lg:mr-28">
         <div className="md:w-2/5">
           <div className="flex items-center gap-3 mb-4">
             <Link href="/" className="flex items-center gap-1">
@@ -29,66 +28,66 @@ const Footer = () => {
         </div>
 
         {/* Right Side - Links */}
-        <div className="md:w-3/5 flex justify-end flex-col md:flex-row gap-12 md:gap-16 lg:gap-24">
-          {/* Short Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              Short links
-            </h3>
-            <ul className="space-y-3 text-gray-600">
-              <li>
-                <a href="#" className="hover:text-gray-900 transition">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 transition">
-                  How it works
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 transition">
-                  Security
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 transition">
-                  Testimonial
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="md:w-3/5 flex justify-end">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-24">
+            {/* Short Links */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Short links
+              </h3>
+              <ul className="space-y-3 text-gray-600">
+                <li>
+                  <a href="#" className="hover:text-gray-900 transition">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-gray-900 transition">
+                    How it works
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-gray-900 transition">
+                    Security
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-gray-900 transition">
+                    Testimonial
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Other Pages */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              Other pages
-            </h3>
-            <ul className="space-y-3 text-gray-600">
-              <li>
-                <a href="#" className="hover:text-gray-900 transition">
-                  Privacy policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 transition">
-                  Terms & conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 transition">
-                  404
-                </a>
-              </li>
-            </ul>
+            {/* Other Pages */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Other pages
+              </h3>
+              <ul className="space-y-3 text-gray-600">
+                <li>
+                  <a href="#" className="hover:text-gray-900 transition">
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-gray-900 transition">
+                    Terms & conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-gray-900 transition">
+                    404
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-200 my-8">
-        
-      </div>
+      <div className="border-t border-gray-200 my-8"></div>
 
       {/* Copyright */}
       <div className="text-center text-gray-500 text-sm">

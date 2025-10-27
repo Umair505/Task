@@ -59,7 +59,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white via-[#faf9ff] to-[#f5f1ff] py-12 px-6 md:px-10">
+    <section className="bg-gradient-to-b from-white via-[#faf9ff] to-[#f5f1ff] py-12 px-6 md:px-8">
       {/* Header */}
       <div className="text-center mb-14">
         <p className="text-sm font-semibold text-purple-600 mb-3 tracking-wider">

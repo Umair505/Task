@@ -51,7 +51,7 @@ export default function TestimonialSection() {
 
   return (
     <section className="bg-[#FAFAFF] py-16 md:py-24 px-6 md:px-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* LEFT TEXT */}
         <div className="text-center lg:text-left">
           <p className="text-sm font-semibold text-purple-600 mb-4 tracking-wider uppercase">

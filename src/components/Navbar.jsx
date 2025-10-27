@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../../public/images/logo.png'
 import Link from 'next/link'
 
@@ -21,6 +21,7 @@ const XIcon = ({
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
     { href: "/", label: "Feature" },
@@ -29,9 +30,26 @@ export default function Navbar() {
     { href: "/", label: "Benefits" }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full  sticky top-0 z-50 mt-8 border-gray-200 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`w-full fixed top-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/80 backdrop-blur-md ' 
+        : 'bg-transparent mt-8'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo Section */}
@@ -42,10 +60,14 @@ export default function Navbar() {
                 alt="Easy Pay" 
                 width={40}
                 height={100}
-                className=" object-contain"
+                className="object-contain"
                 priority
               />
-              <span className="text-xl font-bold">Easy Pay</span>
+              <span className={`text-xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-gray-900'
+              }`}>
+                Easy Pay
+              </span>
             </Link>
           </div>
 
@@ -55,7 +77,11 @@ export default function Navbar() {
               <Link 
                 key={link.label} 
                 href={link.href} 
-                className="text-lg font-medium hover:text-blue-600 transition duration-300"
+                className={`text-lg font-medium transition duration-300 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-blue-600' 
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 {link.label}
               </Link>
@@ -65,7 +91,11 @@ export default function Navbar() {
           {/* Desktop Contact Button & Mobile Menu Button */}
           <div className="flex items-center gap-4">
             {/* Desktop Contact Button */}
-            <button className="hidden md:inline-flex cursor-pointer bg-blue-600 text-white px-6 py-2 rounded-3xl hover:bg-blue-700 transition duration-300">
+            <button className={`hidden md:inline-flex cursor-pointer px-6 py-2 rounded-3xl transition duration-300 ${
+              isScrolled
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-blue-600 text-white hover:bg-blue-700'
+            }`}>
               Contact Us
             </button>
 
@@ -73,7 +103,11 @@ export default function Navbar() {
             <div className="md:hidden">
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)} 
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-colors duration-300" 
+                className={`inline-flex items-center justify-center p-2 rounded-md transition-colors duration-300 ${
+                  isScrolled
+                    ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                } focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500`} 
                 aria-expanded={isMenuOpen}
               >
                 <span className="sr-only">Open main menu</span>
@@ -86,7 +120,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t border-gray-200">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map(link => (
               <Link 

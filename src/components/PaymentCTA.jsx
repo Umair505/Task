@@ -5,7 +5,7 @@ import backGroundImg from "../../public/images/backGroundImg.png";
 export default function PaymentCTA() {
   return (
     <section className="px-6 md:px-12 py-16 md:py-24">
-      <div className="relative w-full max-w-7xl mx-auto rounded-3xl overflow-hidden">
+      <div className="relative w-full max-w-6xl mx-auto rounded-3xl overflow-hidden">
         {/* Background Image */}
         <Image
           src={backGroundImg}
